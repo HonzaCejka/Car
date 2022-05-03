@@ -7,18 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="#FF333333">
     <Grid>
-        <Button x:Name="nalozit" Content="naložit" HorizontalAlignment="Left" Margin="34,368,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <Button x:Name="vylozit" Content="vyložit" HorizontalAlignment="Left" Margin="138,368,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <Button x:Name="Jet" Content="Jet" HorizontalAlignment="Left" Margin="34,317,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <Button x:Name="Natankovat" Content="Natankovat" HorizontalAlignment="Left" Margin="138,317,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <TextBlock x:Name="kamion1" HorizontalAlignment="Left" Margin="49,22,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="295" Width="207" Foreground="White"/>
-        <TextBlock x:Name="Kamion2" HorizontalAlignment="Left" Margin="550,22,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="295" Width="207" Foreground="White"/>
-        <Button x:Name="nalozit2" Content="naložit" HorizontalAlignment="Left" Margin="550,368,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <Button x:Name="Vylozit2" Content="vyložit" HorizontalAlignment="Left" Margin="654,368,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <Button x:Name="Jet2" Content="Jet" HorizontalAlignment="Left" Margin="550,317,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <Button x:Name="Natankovat2" Content="Natankovat" HorizontalAlignment="Left" Margin="654,317,0,0" VerticalAlignment="Top" Height="35" Width="70"/>
-        <TextBox x:Name="input1" HorizontalAlignment="Left" Margin="69,294,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Input2" HorizontalAlignment="Left" Margin="585,294,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="nalozit" Content="naložit" HorizontalAlignment="Left" Margin="34,368,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="nalozit_Click"/>
+        <Button x:Name="vylozit" Content="vyložit" HorizontalAlignment="Left" Margin="138,368,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="vylozit_Click"/>
+        <Button x:Name="Jet" Content="Jet" HorizontalAlignment="Left" Margin="34,317,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="Jet_Click"/>
+        <Button x:Name="Natankovat" Content="Natankovat" HorizontalAlignment="Left" Margin="138,317,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="Natankovat_Click"/>
+        <TextBlock x:Name="kamion1" HorizontalAlignment="Left" Margin="49,22,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="267" Width="207" Foreground="White"/>
+        <TextBlock x:Name="kamion2" HorizontalAlignment="Left" Margin="550,22,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="267" Width="207" Foreground="White"/>
+        <Button x:Name="nalozit2" Content="naložit" HorizontalAlignment="Left" Margin="550,368,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="nalozit2_Click"/>
+        <Button x:Name="Vylozit2" Content="vyložit" HorizontalAlignment="Left" Margin="654,368,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="Vylozit2_Click"/>
+        <Button x:Name="Jet2" Content="Jet" HorizontalAlignment="Left" Margin="550,317,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="Jet2_Click"/>
+        <Button x:Name="Natankovat2" Content="Natankovat" HorizontalAlignment="Left" Margin="654,317,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="Natankovat2_Click"/>
+        <TextBox x:Name="input1" HorizontalAlignment="Left" Margin="69,294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Input2" HorizontalAlignment="Left" Margin="585,294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

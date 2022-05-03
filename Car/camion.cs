@@ -8,6 +8,7 @@ namespace Car
 {
     internal class camion
     {
+        
 
         public string Znacka { get; set; }
         public int Nosnost { get; set; }
@@ -31,24 +32,33 @@ namespace Car
 
         public void Jet(int Vzdalenost)
         {
-            if (Vzdalenost )
+            if (((((Vzdalenost / 100 * Spotreba)) + (25 * (Naložení / Nosnost))) < Palivo))
             {
-
-            }   
+                Palivo -= ((((Vzdalenost / 100) * Spotreba)) + (25 * (Naložení / Nosnost)));
+            }
         }
 
-        public void Naloz()
+        public void Naloz(int naložení)
         {
-
+            Naložení += naložení;
+            if (Naložení > Nosnost)
+            {
+                Naložení = Nosnost;
+            }
+            
         }
-        public void Vyloz()
+        public void Vyloz(int vylozeni)
         {
-
+            Naložení -= vylozeni;
+            if (Naložení < 0)
+            {
+                Naložení = 0;
+            }
         }
 
-        public void Tankovat()
+        public void Tankovat(int palivo)
         {
-            Palivo += input1.Text ;
+            Palivo += palivo;
             if (Palivo > ObjemNádrže)
             {
                 Palivo = ObjemNádrže;
