@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Car
 {
@@ -24,17 +25,22 @@ namespace Car
             Nosnost = nosnost;
             Naložení = 0;
             ObjemNádrže = objemnadrze;
-            Palivo = 0;
+            Palivo = objemnadrze;
             Spotreba = spotreba;
             Vzdalenost = 0;
         }
 
 
-        public void Jet(int Vzdalenost)
+        public void Jet(int vzdalenost)
         {
-            if (((((Vzdalenost / 100 * Spotreba)) + (25 * (Naložení / Nosnost))) < Palivo))
+            if (((((vzdalenost / 100 * Spotreba)) + (25 * (Naložení / Nosnost))) < Palivo))
             {
-                Palivo -= ((((Vzdalenost / 100) * Spotreba)) + (25 * (Naložení / Nosnost)));
+                Palivo -= ((((vzdalenost / 100) * Spotreba)) + (25 * (Naložení / Nosnost)));
+                Vzdalenost += vzdalenost;
+            }
+            else
+            {
+                throw new Exception();
             }
         }
 
