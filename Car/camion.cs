@@ -33,23 +33,25 @@ namespace Car
 
         public void Jet(int vzdalenost)
         {
-            if (((((vzdalenost / 100 * Spotreba)) + (25 * (Naložení / Nosnost))) < Palivo))
+            
+            if (((vzdalenost / 100 * Spotreba) + (25 * (Naložení / Nosnost))) < Palivo)
             {
-                Palivo -= ((((vzdalenost / 100) * Spotreba)) + (25 * (Naložení / Nosnost)));
+                Palivo -= (((vzdalenost / 100) * Spotreba)) + (25 * (Naložení / Nosnost));
                 Vzdalenost += vzdalenost;
             }
             else
             {
-                throw new Exception();
+                MessageBox.Show("Nemáš dostatek benzínu");
             }
-        }
 
+        }
         public void Naloz(int naložení)
         {
             Naložení += naložení;
             if (Naložení > Nosnost)
             {
                 Naložení = Nosnost;
+                MessageBox.Show("nejde naložit více než je nosnost !");
             }
             
         }
@@ -59,6 +61,7 @@ namespace Car
             if (Naložení < 0)
             {
                 Naložení = 0;
+                MessageBox.Show("už bylo vše vyloženo!");
             }
         }
 
@@ -68,7 +71,9 @@ namespace Car
             if (Palivo > ObjemNádrže)
             {
                 Palivo = ObjemNádrže;
+                MessageBox.Show("nádrž je plná!");
             }
         }
+
     }
 }

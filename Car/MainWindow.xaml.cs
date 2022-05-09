@@ -28,7 +28,7 @@ namespace Car
         {
             InitializeComponent();
 
-            Scania = new camion(10000, 200, 30);
+            Scania = new camion(10000, 300, 30);
             Scania.Znacka = "Scania";
 
             Mercedes = new camion(10000, 220, 32);
